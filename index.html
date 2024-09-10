@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web AR with Hiro Marker</title>
+    <!-- Include A-Frame and AR.js libraries -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <!-- AR.js Scene for Web AR -->
+    <a-scene embedded arjs='sourceType: webcam;'>
+      <!-- Use the default "hiro" marker -->
+      <a-marker preset='hiro'>
+        <!-- 3D Text that will display -->
+        <a-entity id="textEntity" text="value: Hi friend; color: red; align: center; width: 4" 
+                  position="0 0.1 0" rotation="-90 0 0">
+        </a-entity>
+      </a-marker>
+      <!-- Add the camera entity -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
